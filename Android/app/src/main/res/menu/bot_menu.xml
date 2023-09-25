@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Bluetooth"
+          android:icon="@drawable/ic_bluetooth"
+          android:id="@+id/bluetoothFragment" />
+    <item android:title="Status"
+          android:icon="@drawable/ic_status"
+          android:id="@+id/statusFragment" />
+    <item android:title="Fastest Car"
+        android:icon="@drawable/ic_time"
+        android:id="@+id/fastestCarFragment" />
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bot_nav"
+    app:startDestination="@id/bluetoothFragment">
+
+    <fragment
+        android:id="@+id/bluetoothFragment"
+        android:name="com.example.ay22_23s2mdpgrp9.bluetooth.BluetoothFragment"
+        android:label="Bluetooth"
+        tools:layout="@layout/fragment_bluetooth" />
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="com.example.ay22_23s2mdpgrp9.status.StatusFragment"
+        android:label="Status"
+        tools:layout="@layout/fragment_status" />
+    <fragment
+        android:id="@+id/fastestCarFragment"
+        android:name="com.example.ay22_23s2mdpgrp9.FastestCarFragment.FastestCarFragment"
+        android:label="Fastest Car" />
+</navigation>

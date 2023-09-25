@@ -1,0 +1,176 @@
+08:32:44 **** Incremental Build of configuration Debug for project MDP_code ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I"C:/Users/jiaya/STM32CubeIDE/workspace_1.11.0/MDP_code_ben/MDP_code/PeripheralDriver/Inc" -I"C:/Users/jiaya/STM32CubeIDE/workspace_1.11.0/MDP_code_ben/MDP_code/PeripheralDriver/Src" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'motorForward':
+../Core/Src/main.c:375:2: warning: implicit declaration of function 'gyroInit' [-Wimplicit-function-declaration]
+  375 |  gyroInit();
+      |  ^~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:552:6: warning: conflicting types for 'gyroInit'
+  552 | void gyroInit(){
+      |      ^~~~~~~~
+../Core/Src/main.c:375:2: note: previous implicit declaration of 'gyroInit' was here
+  375 |  gyroInit();
+      |  ^~~~~~~~
+../Core/Src/main.c: In function 'motorRight':
+../Core/Src/main.c:749:10: warning: unused variable 'Aint' [-Wunused-variable]
+  749 |   double Aint = 0;
+      |          ^~~~
+../Core/Src/main.c: In function 'motorLeft':
+../Core/Src/main.c:783:10: warning: unused variable 'Aint' [-Wunused-variable]
+  783 |   double Aint = 0;
+      |          ^~~~
+../Core/Src/main.c: In function 'motorRightB':
+../Core/Src/main.c:839:10: warning: unused variable 'Aint' [-Wunused-variable]
+  839 |   double Aint = 0;
+      |          ^~~~
+../Core/Src/main.c: In function 'motorLeftB':
+../Core/Src/main.c:876:10: warning: unused variable 'Aint' [-Wunused-variable]
+  876 |   double Aint = 0;
+      |          ^~~~
+../Core/Src/main.c: In function 'backRight':
+../Core/Src/main.c:1031:10: warning: unused variable 'Aint' [-Wunused-variable]
+ 1031 |   double Aint = 0;
+      |          ^~~~
+../Core/Src/main.c: In function 'backLeft':
+../Core/Src/main.c:1072:10: warning: unused variable 'Aint' [-Wunused-variable]
+ 1072 |   double Aint = 0;
+      |          ^~~~
+../Core/Src/main.c: In function 'motorBackA':
+../Core/Src/main.c:1120:12: warning: unused variable 'Aint' [-Wunused-variable]
+ 1120 |     double Aint = 0;
+      |            ^~~~
+../Core/Src/main.c: In function 'StartDefaultTask':
+../Core/Src/main.c:1978:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+ 1978 |    sprintf(receiveBuffer, "%s\0", aRxBuffer);
+      |    ^~~~~~~
+../Core/Src/main.c:1978:4: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/main.c:128:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+  127 | #include "../../PeripheralDriver/Inc/oledfont.h"
+  +++ |+#include <stdio.h>
+  128 | 
+../Core/Src/main.c:1978:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+ 1978 |    sprintf(receiveBuffer, "%s\0", aRxBuffer);
+      |            ^~~~~~~~~~~~~
+      |            |
+      |            uint8_t * {aka unsigned char *}
+../Core/Src/main.c:1978:12: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:1978:30: warning: embedded '\0' in format [-Wformat-contains-nul]
+ 1978 |    sprintf(receiveBuffer, "%s\0", aRxBuffer);
+      |                              ^~
+../Core/Src/main.c:1985:15: warning: implicit declaration of function 'roundf' [-Wimplicit-function-declaration]
+ 1985 |    ir1_dist = roundf(-14.16*log(ir1)+122.67);
+      |               ^~~~~~
+../Core/Src/main.c:1985:15: warning: incompatible implicit declaration of built-in function 'roundf'
+../Core/Src/main.c:128:1: note: include '<math.h>' or provide a declaration of 'roundf'
+  127 | #include "../../PeripheralDriver/Inc/oledfont.h"
+  +++ |+#include <math.h>
+  128 | 
+../Core/Src/main.c:1985:29: warning: implicit declaration of function 'log' [-Wimplicit-function-declaration]
+ 1985 |    ir1_dist = roundf(-14.16*log(ir1)+122.67);
+      |                             ^~~
+../Core/Src/main.c:1985:29: warning: incompatible implicit declaration of built-in function 'log'
+../Core/Src/main.c:1985:29: note: include '<math.h>' or provide a declaration of 'log'
+../Core/Src/main.c:1988:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+ 1988 |    sprintf(hello,"IR Dist:%dcm",ir1_dist);
+      |            ^~~~~
+      |            |
+      |            uint8_t * {aka unsigned char *}
+../Core/Src/main.c:1988:12: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:1991:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+ 1991 |    sprintf(yay, "US Dist:%dcm",us_dist);
+      |            ^~~
+      |            |
+      |            uint8_t * {aka unsigned char *}
+../Core/Src/main.c:1991:12: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:1994:28: warning: embedded '\0' in format [-Wformat-contains-nul]
+ 1994 |    sprintf(bye, "angle %5d \0", (int)(total_angle));
+      |                            ^~
+../Core/Src/main.c:1995:27: warning: pointer targets in passing argument 3 of 'OLED_ShowString' differ in signedness [-Wpointer-sign]
+ 1995 |    OLED_ShowString(10,40, bye);
+      |                           ^~~
+      |                           |
+      |                           char *
+../Core/Src/main.c:264:57: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  264 | void OLED_ShowString(uint8_t x,uint8_t y,const uint8_t *p)
+      |                                          ~~~~~~~~~~~~~~~^
+../Core/Src/main.c: In function 'motorTask':
+../Core/Src/main.c:2241:10: warning: unused variable 'hello' [-Wunused-variable]
+ 2241 |  uint8_t hello[20];
+      |          ^~~~~
+../Core/Src/main.c:2236:9: warning: unused variable 'RInt' [-Wunused-variable]
+ 2236 |  double RInt = 0;
+      |         ^~~~
+../Core/Src/main.c:2235:9: warning: unused variable 'prevErrorR' [-Wunused-variable]
+ 2235 |  double prevErrorR = 0;
+      |         ^~~~~~~~~~
+../Core/Src/main.c:2232:9: warning: unused variable 'LInt' [-Wunused-variable]
+ 2232 |  double LInt = 0;
+      |         ^~~~
+../Core/Src/main.c:2231:9: warning: unused variable 'prevErrorL' [-Wunused-variable]
+ 2231 |  double prevErrorL = 0;
+      |         ^~~~~~~~~~
+../Core/Src/main.c: In function 'gyroTask':
+../Core/Src/main.c:2382:10: warning: unused variable 'offset' [-Wunused-variable]
+ 2382 |  int16_t offset = 0;
+      |          ^~~~~~
+../Core/Src/main.c:2381:6: warning: unused variable 'dir' [-Wunused-variable]
+ 2381 |  int dir;
+      |      ^~~
+../Core/Src/main.c:2374:7: warning: unused variable 'hello' [-Wunused-variable]
+ 2374 |  char hello[20];
+      |       ^~~~~
+../Core/Src/main.c: In function 'ultrasoundTask':
+../Core/Src/main.c:2460:28: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+ 2460 |  HAL_ADC_Start_DMA(&hadc1, lengthFront, 4096);
+      |                            ^~~~~~~~~~~
+      |                            |
+      |                            uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:294,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef* hadc, uint32_t* pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:2471:7: warning: unused variable 'v' [-Wunused-variable]
+ 2471 |  char v = '0';
+      |       ^
+../Core/Src/main.c:2466:6: warning: unused variable 'pwmVal' [-Wunused-variable]
+ 2466 |  int pwmVal=0;
+      |      ^~~~~~
+../Core/Src/main.c:2465:6: warning: unused variable 'gyroVal' [-Wunused-variable]
+ 2465 |  int gyroVal=0;
+      |      ^~~~~~~
+../Core/Src/main.c:2464:6: warning: unused variable 'nextDirection' [-Wunused-variable]
+ 2464 |  int nextDirection = -270;
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:2463:11: warning: unused variable 'lastSide' [-Wunused-variable]
+ 2463 |  uint16_t lastSide = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:2462:11: warning: unused variable 'lastFront' [-Wunused-variable]
+ 2462 |  uint16_t lastFront = 0;
+      |           ^~~~~~~~~
+../Core/Src/main.c:2459:8: warning: unused variable 'distanceC' [-Wunused-variable]
+ 2459 | double distanceC;
+      |        ^~~~~~~~~
+arm-none-eabi-gcc -o "MDP_code.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\jiaya\STM32CubeIDE\workspace_1.11.0\MDP_code_ben\MDP_code\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MDP_code.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MDP_code.elf
+ 
+arm-none-eabi-size   MDP_code.elf 
+arm-none-eabi-objdump -h -S  MDP_code.elf  > "MDP_code.list"
+arm-none-eabi-objcopy  -O ihex  MDP_code.elf  "MDP_code.hex"
+arm-none-eabi-objcopy  -O binary  MDP_code.elf  "MDP_code.bin"
+   text	   data	    bss	    dec	    hex	filename
+  58332	    144	  30584	  89060	  15be4	MDP_code.elf
+Finished building: default.size.stdout
+ 
+Finished building: MDP_code.bin
+Finished building: MDP_code.hex
+ 
+ 
+Finished building: MDP_code.list
+ 
+
+08:32:46 Build Finished. 0 errors, 37 warnings. (took 2s.193ms)
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="map_obs_offset">-3dp</dimen>
+    <dimen name="map_obs_border">2dp</dimen>
+
+    <dimen name="map_obs_radius">0dp</dimen>
+    <dimen name="map_btn_radius">2dp</dimen>
+
+    <dimen name="map_btn_offset">-2dp</dimen>
+    <dimen name="map_btn_border">2dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
